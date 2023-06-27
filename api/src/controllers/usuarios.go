@@ -6,13 +6,10 @@ import (
 	"api/src/repositorios"
 	"api/src/respostas"
 	"encoding/json"
-	_ "fmt"
 	"io/ioutil"
-	_ "log"
 	"net/http"
 	"strconv"
 	"strings"
-
 	"github.com/gorilla/mux"
 )
 
