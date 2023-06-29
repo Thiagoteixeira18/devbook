@@ -5,36 +5,36 @@ import (
 	"net/http"
 )
 
-var rotasusuarios = []Rota{
+var rotasUsuarios = []Rota{
 	{
 		URI:                "/usuarios",
 		Metodo:             http.MethodPost,
-		função:             controllers.CriarUsuario,
+		funçao:             controllers.CriarUsuario,
 		requerAutenticação: false,
 	},
 
 	{
 		URI:                "/usuarios",
 		Metodo:             http.MethodGet,
-		função:             controllers.BuscarUsuarios,
-		requerAutenticação: false,
+		funçao:             controllers.BuscarUsuarios,
+		requerAutenticação: true,
 	},
 	{
 		URI:                "/usuarios/{usuarioId}",
 		Metodo:             http.MethodGet,
-		função:             controllers.BuscarUsuario,
-		requerAutenticação: false,
+		funçao:             controllers.BuscarUsuario,
+		requerAutenticação: true,
 	},
 	{
 		URI:                "/usuarios/{usuarioId}",
 		Metodo:             http.MethodPut,
-		função:             controllers.AtualizarUsuario,
-		requerAutenticação: false,
+		funçao:             controllers.AtualizarUsuario,
+		requerAutenticação: true,
 	},
 	{
 		URI:                "/usuarios/{usuarioId}",
 		Metodo:             http.MethodDelete,
-		função:             controllers.DeltarUsuario,
-		requerAutenticação: false,
+		funçao:             controllers.DeltarUsuario,
+		requerAutenticação: true,
 	},
 }
