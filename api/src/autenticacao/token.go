@@ -57,7 +57,6 @@ func ExtrairUsuarioID(r *http.Request) (uint64, error) {
 	return 0, errors.New("Token inválido")
 }
 
-
 func extrairToken(r *http.Request) string {
 	token := r.Header.Get("Authorization")
 
