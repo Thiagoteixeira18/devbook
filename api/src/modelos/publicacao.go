@@ -12,7 +12,7 @@ type Publicacao struct {
 	Titulo string `json:"titulo,omitempyt"`
 	Conteudo string `json:"conteudo,omitempyt"`
 	AutorID uint64 `json:"autorId,omitempyt"`
-	AutorNick uint64  `json:"autorNick,omitempyt"`
+	AutorNick string `json:"autorNick,omitempyt"`
 	Curtidas uint64 `json:"curtidas"`
 	CriadaEm time.Time `json:"criadaEm,omitempyt"`
 }
@@ -36,7 +36,7 @@ func (publicacao *Publicacao) validar() error {
 	return nil
 }
 
-func (publicacao *Publicacao) formatar() error {
+func (publicacao *Publicacao) formatar() {
 	publicacao.Titulo = strings.TrimSpace(publicacao.Titulo)
 	publicacao.Conteudo = strings.TrimSpace(publicacao.Conteudo)
 }
